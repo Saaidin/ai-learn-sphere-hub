@@ -8,12 +8,15 @@ import BlogPostCard, { BlogPost } from '@/components/BlogPostCard';
 import VideoCard, { Video } from '@/components/VideoCard';
 import EbookCard, { Ebook } from '@/components/EbookCard';
 import SubscriptionForm from '@/components/SubscriptionForm';
-import { blogPosts, videos, ebooks } from '@/data/mockData';
+import { useBlogPosts, useVideos, useEbooks } from '@/data/mockData';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { BookOpen, Youtube, Book } from "lucide-react";
 
 const Index = () => {
+  const { blogPosts } = useBlogPosts();
+  const { videos } = useVideos();
+  const { ebooks } = useEbooks();
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

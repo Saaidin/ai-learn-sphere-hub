@@ -1,63 +1,54 @@
 
-import React, { useState } from 'react';
-import { useToast } from "@/hooks/use-toast";
+
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { MailCheck } from 'lucide-react';
 
-const SubscriptionForm = () => {
-  const { toast } = useToast();
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+declare global {
+  interface Window {
+    jotform?: {
+      (callback: () => void): void;
+    };
+  }
+}
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
-    
-    try {
-      // In a real application, you would send this data to your backend
-      console.log("Submitting subscription:", { name, email });
+const SubscriptionForm = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  useEffect(() => {
+    // Load JotForm script
+    const script = document.createElement('script');
+    script.src = 'https://js.jotform.com/JotForm.js';
+    script.async = true;
+    script.onload = () => {
+      console.log('JotForm script loaded successfully');
+      setScriptLoaded(true);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Success notification
-      toast({
-        title: "Subscription Successful!",
-        description: "Your free eBooks will be sent to your email shortly.",
-      });
-      
-      // Clear form and show success state
-      setName("");
-      setEmail("");
-      setIsSuccess(true);
-      
-    } catch (error) {
-      toast({
-        title: "Subscription Failed",
-        description: "There was an error subscribing. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-  
+      if (window.jotform) {
+        window.jotform(() => {
+          console.log('Jotform initialized successfully');
+        });
+      }
+    };
+    script.onerror = () => {
+      console.error('Failed to load JotForm script');
+    };
+    document.body.appendChild(script);
+
+    const handleSubmission = (event) => {
+      if (event.data && event.data.action === 'submission-completed') {
+        setIsSuccess(true);
+      }
+    };
+
+    window.addEventListener('message', handleSubmission);
+    return () => {
+      window.removeEventListener('message', handleSubmission);
+      document.body.removeChild(script);
+    };
+  }, [isSuccess]);
+
   const resetForm = () => {
     setIsSuccess(false);
   };
@@ -76,49 +67,25 @@ const SubscriptionForm = () => {
           <Button onClick={resetForm} variant="outline">Subscribe Another Email</Button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-semibold mb-2">Get Free AI eBooks</h3>
-            <p className="text-gray-600">Subscribe to our newsletter for exclusive AI content.</p>
-          </div>
+        <div className="space-y-4">
           
-          <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
-            <Input
-              id="name"
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full"
-            />
-          </div>
-          
-          <Button 
-            type="submit" 
-            className="w-full bg-ai-primary hover:bg-ai-accent" 
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Subscribing..." : "Subscribe Now"}
-          </Button>
+          {/* JotForm embed */}
+          {scriptLoaded && (
+            <>
+              <iframe
+                src="https://form.jotform.com/250923040209447"
+                title="AI Learning Platform Subscription"
+                style={{width: '100%', height: '400px', border: 'none'}}
+                allowFullScreen
+                allow="geolocation; microphone; camera"
+              ></iframe>
+            </>
+          )}
           
           <p className="text-xs text-gray-500 text-center">
             By subscribing, you agree to our privacy policy and consent to receive updates from AI Learning Platform.
           </p>
-        </form>
+        </div>
       )}
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EbookCard, { Ebook } from '@/components/EbookCard';
-import { ebooks } from '@/data/mockData';
+import { useEbooks } from '@/data/mockData';
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search } from 'lucide-react';
@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 
 const Ebooks = () => {
   const [searchQuery, setSearchQuery] = React.useState("");
+  const { ebooks } = useEbooks();
   const [filteredEbooks, setFilteredEbooks] = React.useState(ebooks);
   
   // Duplicate the ebooks a few times to show more content

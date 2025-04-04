@@ -1,7 +1,42 @@
-import { useState } from 'react';
+import { PrismaClient } from '@prisma/client';
 
-export const useBlogPosts = () => {
-  const [blogPosts, setBlogPosts] = useState([
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  coverImage: string;
+  date: string;
+  author: string;
+  category: string;
+  slug: string;
+  content: string;
+}
+
+interface Video {
+  id: string;
+  title: string;
+  thumbnailUrl: string;
+  youtubeId: string;
+  duration: string;
+  description: string;
+  category: string;
+}
+
+interface Ebook {
+  id: string;
+  title: string;
+  coverImage: string;
+  author: string;
+  description: string;
+  category: string;
+  pages: number;
+  freePreview: boolean;
+}
+
+const prisma = new PrismaClient();
+
+// Mock data extracted from mockData.ts
+const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'Getting Started with Machine Learning: A Beginner\'s Guide',
@@ -35,25 +70,9 @@ export const useBlogPosts = () => {
     slug: 'computer-vision-techniques',
     content: 'An in-depth look at computer vision techniques for object detection, including algorithms and real-world applications.'
   }
-  ]);
+];
 
-  const addBlogPost = (post) => {
-    setBlogPosts([...blogPosts, post]);
-  };
-
-  const updateBlogPost = (id, updatedPost) => {
-    setBlogPosts(blogPosts.map(post => post.id === id ? updatedPost : post));
-  };
-
-  const deleteBlogPost = (id) => {
-    setBlogPosts(blogPosts.filter(post => post.id !== id));
-  };
-
-  return { blogPosts, addBlogPost, updateBlogPost, deleteBlogPost };
-};
-
-export const useVideos = () => {
-  const [videos, setVideos] = useState([
+const videos: Video[] = [
   {
     id: '1',
     title: 'Introduction to Neural Networks',
@@ -81,25 +100,9 @@ export const useVideos = () => {
     description: 'Understanding the principles behind reinforcement learning algorithms and their applications.',
     category: 'Reinforcement Learning'
   }
-  ]);
+];
 
-  const addVideo = (video) => {
-    setVideos([...videos, video]);
-  };
-
-  const updateVideo = (id, updatedVideo) => {
-    setVideos(videos.map(video => video.id === id ? updatedVideo : video));
-  };
-
-  const deleteVideo = (id) => {
-    setVideos(videos.filter(video => video.id !== id));
-  };
-
-  return { videos, addVideo, updateVideo, deleteVideo };
-};
-
-export const useEbooks = () => {
-  const [ebooks, setEbooks] = useState([
+const ebooks: Ebook[] = [
   {
     id: '1',
     title: 'The Ultimate Guide to Deep Learning',
@@ -130,32 +133,78 @@ export const useEbooks = () => {
     pages: 214,
     freePreview: true
   }
-  ]);
+];
 
-  const addEbook = (ebook) => {
-    setEbooks([...ebooks, ebook]);
-  };
+async function migrateData() {
+  try {
+    // Clear existing data (optional)
+    console.log('Clearing existing data...');
+    await prisma.blogPost.deleteMany();
+    await prisma.video.deleteMany();
+    await prisma.ebook.deleteMany();
+    console.log('Existing data cleared');
 
-  const updateEbook = (id, updatedEbook) => {
-    setEbooks(ebooks.map(ebook => ebook.id === id ? updatedEbook : ebook));
-  };
+    // Transform and insert blog posts
+    const blogPostsToInsert = blogPosts.map(post => ({
+      title: post.title,
+      slug: post.slug,
+      content: post.content,
+      excerpt: post.excerpt,
+      coverImage: post.coverImage,
+      author: post.author,
+      publishedAt: new Date(post.date),
+      tags: [post.category]
+    }));
 
-  const deleteEbook = (id) => {
-    setEbooks(ebooks.filter(ebook => ebook.id !== id));
-  };
+    const blogInsertResult = await prisma.blogPost.createMany({
+      data: blogPostsToInsert
+    });
+    console.log(`Inserted ${blogInsertResult.count} blog posts`);
 
-  return { ebooks, addEbook, updateEbook, deleteEbook };
-};
+    // Transform and insert ebooks
+    const ebooksToInsert = ebooks.map(ebook => ({
+      title: ebook.title,
+      slug: ebook.title.toLowerCase().replace(/ /g, '-'),
+      description: ebook.description,
+      coverImage: ebook.coverImage,
+      fileUrl: '',
+      author: ebook.author,
+      publishedAt: new Date(),
+      category: ebook.category,
+      pages: ebook.pages
+    }));
 
-export const useAdminData = () => {
-  const { blogPosts, addBlogPost, updateBlogPost, deleteBlogPost } = useBlogPosts();
-  const { videos, addVideo, updateVideo, deleteVideo } = useVideos();
-  const { ebooks, addEbook, updateEbook, deleteEbook } = useEbooks();
+    const ebooksInsertResult = await prisma.ebook.createMany({
+      data: ebooksToInsert
+    });
+    console.log(`Inserted ${ebooksInsertResult.count} ebooks`);
 
-  return {
-    blogPosts, addBlogPost, updateBlogPost, deleteBlogPost,
-    videos, addVideo, updateVideo, deleteVideo,
-    ebooks, addEbook, updateEbook, deleteEbook
-  };
-};
+    // Transform and insert videos
+    const videosToInsert = videos.map(video => {
+      const [minutes, seconds] = video.duration.split(':').map(Number);
+      return {
+        title: video.title,
+        youtubeId: video.youtubeId,
+        description: video.description,
+        thumbnail: video.thumbnailUrl,
+        duration: minutes * 60 + seconds,
+        publishedAt: new Date(),
+        tags: [video.category]
+      };
+    });
 
+    const videosInsertResult = await prisma.video.createMany({
+      data: videosToInsert
+    });
+    console.log(`Inserted ${videosInsertResult.count} videos`);
+
+    console.log('Data migration completed successfully');
+  } catch (error) {
+    console.error('Error during data migration:', error);
+    process.exit(1);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+migrateData();

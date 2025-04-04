@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
@@ -17,7 +17,8 @@ const MenubarRadioGroup = MenubarPrimitive.RadioGroup
 const Menubar = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
->(({ className, ...props }, ref) => (
+>(({ className, ...props }, ref) => {
+  return (
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
@@ -25,8 +26,11 @@ const Menubar = React.forwardRef<
       className
     )}
     {...props}
-  />
-))
+  >
+    {props.children}
+  </MenubarPrimitive.Root>
+  );
+});
 Menubar.displayName = MenubarPrimitive.Root.displayName
 
 const MenubarTrigger = React.forwardRef<

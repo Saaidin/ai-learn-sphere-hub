@@ -3,13 +3,14 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogPostCard, { BlogPost } from '@/components/BlogPostCard';
-import { blogPosts } from '@/data/mockData';
+import { useBlogPosts } from '@/data/mockData';
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search } from 'lucide-react';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = React.useState("");
+  const { blogPosts } = useBlogPosts();
   const [filteredPosts, setFilteredPosts] = React.useState(blogPosts);
   
   // Duplicate the blog posts a few times to show more content

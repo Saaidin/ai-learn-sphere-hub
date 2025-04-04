@@ -3,13 +3,14 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VideoCard, { Video } from '@/components/VideoCard';
-import { videos } from '@/data/mockData';
+import { useVideos } from '@/data/mockData';
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search } from 'lucide-react';
 
 const Videos = () => {
   const [searchQuery, setSearchQuery] = React.useState("");
+  const { videos } = useVideos();
   const [filteredVideos, setFilteredVideos] = React.useState(videos);
   
   // Duplicate the videos a few times to show more content

@@ -15,7 +15,7 @@ const Subscribe = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl font-bold mb-6">Subscribe for Free AI eBooks</h1>
+                <h1 className="text-4xl font-bold mb-6">Subscribe for Free eBooks</h1>
                 <p className="text-lg text-gray-600 mb-6">
                   Join our community and get exclusive access to AI learning resources, tutorials, 
                   and valuable insights delivered directly to your inbox.
@@ -62,13 +62,15 @@ const Subscribe = () => {
                 <div className="flex items-center p-4 bg-blue-50 rounded-lg">
                   <Book className="h-6 w-6 text-ai-primary mr-3 flex-shrink-0" />
                   <p className="text-sm text-gray-700">
-                    Your email <span className="font-medium">will be sent to dinme73@gmail.com</span> for processing and delivery of the free resources.
+                    Your email will be used to deliver the free resources directly to your inbox.
                   </p>
                 </div>
               </div>
               
               <div>
-                <SubscriptionForm />
+                <div className="max-w-md mx-auto">
+                  <SubscriptionForm />
+                </div>
               </div>
             </div>
           </div>
