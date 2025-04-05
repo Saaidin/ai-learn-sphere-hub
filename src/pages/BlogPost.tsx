@@ -1,38 +1,41 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { useBlogPosts } from '@/data/mockData';
+import { useParams } from 'react-router-dom';
 
 const BlogPost = () => {
-  const { blogPosts } = useBlogPosts();
   const { slug } = useParams();
-  const post = blogPosts.find((post) => post.slug === slug);
+  const { blogPosts } = useBlogPosts();
+  
+  const post = blogPosts.find(post => post.slug === slug);
 
   if (!post) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <div className="text-center py-12">
-            <h3 className="text-xl font-medium text-gray-600">Blog post not found.</h3>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    );
+    return <div className="min-h-screen flex items-center justify-center">
+      <h1 className="text-2xl">Post not found</h1>
+    </div>;
   }
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <div className="container px-4 mx-auto py-12">
+      <main className="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+        <article>
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-          <p className="text-gray-600 mb-8">{post.content}</p>
-        </div>
+          <div className="flex items-center gap-4 mb-8">
+            <span className="text-gray-600">{post.date}</span>
+            <span className="text-gray-600">by {post.author}</span>
+            <span className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+              {post.category}
+            </span>
+          </div>
+          <img 
+            src={post.coverImage} 
+            alt={post.title}
+            className="w-full h-96 object-cover rounded-lg mb-8"
+          />
+          <div className="prose max-w-none">
+            <p>{post.content}</p>
+          </div>
+        </article>
       </main>
-      <Footer />
     </div>
   );
 };

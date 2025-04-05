@@ -20,8 +20,8 @@ interface VideoCardProps {
 
 const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
   return (
-    <div className="content-card">
-      <Link to={`/videos/${video.id}`}>
+    <div className="content-card h-full flex flex-col">
+      <Link to={`/videos/${video.id}`} className="flex-grow">
         <div className="relative">
           <div className="aspect-video overflow-hidden">
             <img 

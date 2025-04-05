@@ -3,18 +3,35 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogPostCard, { BlogPost } from '@/components/BlogPostCard';
-import { useBlogPosts } from '@/data/mockData';
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search } from 'lucide-react';
+import { useBlogPosts } from '@/data/mockData';
 
 const Blog = () => {
+  const { blogPosts: mockPosts } = useBlogPosts();
   const [searchQuery, setSearchQuery] = React.useState("");
-  const { blogPosts } = useBlogPosts();
-  const [filteredPosts, setFilteredPosts] = React.useState(blogPosts);
+  const [blogPosts, setBlogPosts] = React.useState<BlogPost[]>(mockPosts);
+  const [filteredPosts, setFilteredPosts] = React.useState<BlogPost[]>(mockPosts);
+
+  React.useEffect(() => {
+    fetch('http://localhost:3000/blog')
+      .then(res => res.json())
+      .then(data => {
+        // Deduplicate posts based on title + excerpt
+        const uniquePosts = data.filter((post: BlogPost, index: number, self: BlogPost[]) =>
+          index === self.findIndex((p) =>
+            p.title === post.title && p.excerpt === post.excerpt
+          )
+        );
+        setBlogPosts(uniquePosts);
+        setFilteredPosts(uniquePosts);
+      })
+      .catch(err => console.error('Error fetching blog posts:', err));
+  }, []);
   
   // Duplicate the blog posts a few times to show more content
-  const allBlogPosts = [...blogPosts, ...blogPosts.map(post => ({...post, id: post.id + '-dup1'}))];
+  const allBlogPosts = blogPosts;
   
   React.useEffect(() => {
     if (searchQuery.trim() === "") {
@@ -27,25 +44,24 @@ const Blog = () => {
       );
       setFilteredPosts(filtered);
     }
-  }, [searchQuery]);
-  
+  }, [searchQuery, allBlogPosts]);
+
   // Extract unique categories for the filter
   const categories = Array.from(new Set(allBlogPosts.map(post => post.category)));
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
-
+      {/* Remove Navbar since it's likely already in App.tsx */}
+      
       <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-ai-light py-12">
-          <div className="container px-4 mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4">AI Learning Blog</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore our collection of articles on machine learning, deep learning,
-              computer vision, and more AI topics.
-            </p>
-          </div>
+        {/* New Post Button */}
+        <div className="container px-4 mx-auto text-center mt-8">
+          <button
+            className="bg-ai-primary hover:bg-ai-primary-dark text-white font-bold py-2 px-6 rounded-lg transition-colors"
+            onClick={() => window.location.href = '/blog/new'}
+          >
+            New Post
+          </button>
         </div>
         
         {/* Search & Filters */}
@@ -96,8 +112,6 @@ const Blog = () => {
           )}
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };
