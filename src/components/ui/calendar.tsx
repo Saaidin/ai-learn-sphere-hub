@@ -5,6 +5,30 @@ import { DayPicker } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
+function CustomNavigation(props: React.ComponentProps<"div"> & {
+  nextMonthButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+  previousMonthButtonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+}) {
+  return (
+    <div {...props}>
+      <button
+        {...props.previousMonthButtonProps}
+        type="button"
+        className={props.previousMonthButtonProps?.className}
+      >
+        <ChevronLeft className="h-4 w-4" />
+      </button>
+      <button
+        {...props.nextMonthButtonProps}
+        type="button"
+        className={props.nextMonthButtonProps?.className}
+      >
+        <ChevronRight className="h-4 w-4" />
+      </button>
+    </div>
+  );
+}
+
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
 function Calendar({
@@ -52,8 +76,9 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />,
+        Navbar: CustomNavigation,
+      } as Partial<React.ComponentProps<typeof DayPicker>['components']> & {
+        Navbar: typeof CustomNavigation;
       }}
       {...props}
     />
@@ -62,3 +87,4 @@ function Calendar({
 Calendar.displayName = "Calendar";
 
 export { Calendar };
+
