@@ -14,6 +14,8 @@ import VideoDetail from '@/pages/VideoDetail';
 import Donate from '@/pages/Donate';
 import Admin from '@/pages/Admin';
 import Subscribe from './pages/Subscribe';
+import VibeCodeDetail from '@/pages/VibeCodeDetail';
+import VibeCoding from '@/pages/VibeCoding';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/subscribe" element={<Subscribe />} />
+        <Route path="/vibe-coding/:id" element={<VibeCodeDetail />} />
+        <Route path="/vibe-coding" element={<VibeCoding />} />
       </Routes>
       <Footer />
     </>
