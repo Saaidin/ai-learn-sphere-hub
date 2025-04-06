@@ -135,14 +135,14 @@ export const useBlogPosts = () => {
     const [ebooks, setEbooks] = useState([
     {
       id: '1',
-      title: 'The Ultimate Guide to Deep Learning',
-      coverImage: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-      author: 'Dr. Alan Smith',
-      description: 'This comprehensive guide covers everything from basic neural networks to advanced deep learning architectures. Perfect for both beginners and experienced practitioners looking to expand their knowledge.',
-      category: 'Deep Learning',
-      pages: 248,
+      title: 'Belajar AI Deepseek Untuk Produktiviti Tinggi',
+      coverImage: '/images/ebooks/eb-d-1.png',
+      author: 'Saaidin Mat Esa',
+      description: 'Berikut ialah strategi utama untuk memanfaatkan DeepSeek AI untuk meningkatkan produktiviti dan penjanaan kekayaan. Antaranya adalah Automatikkan Tugasan Berulang untuk Manfaatkan Masa terluang, Manfaatkan AI untuk Pembuatan Keputusan Berdasarkan Data, Skalakan Hasil dengan Pemasaran & Jualan Dikuasakan AI dan lain-lain.',
+      category: 'eBooks Learning',
+      pages: 6,
       freePreview: true,
-      publishedDate: 'March 15, 2023',
+      publishedDate: 'April 6, 2025',
       isbn: '978-3-16-148410-0',
       downloadLink: '/downloads/deep-learning-guide.pdf',
       tableOfContents: [

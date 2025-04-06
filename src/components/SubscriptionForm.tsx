@@ -62,7 +62,7 @@ const SubscriptionForm = () => {
           </div>
           <h3 className="text-2xl font-semibold mb-2">Thank You for Subscribing!</h3>
           <p className="text-gray-600 mb-4">
-            Your free eBooks will be sent to your email inbox shortly.
+            Your free eBooks or others will be sent to your email inbox shortly.
           </p>
           <Button onClick={resetForm} variant="outline">Subscribe Another Email</Button>
         </div>

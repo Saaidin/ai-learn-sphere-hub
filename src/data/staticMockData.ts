@@ -100,8 +100,8 @@ export const videos = [
 export const ebooks = [
   {
     id: '1',
-    title: 'The Ultimate Guide to Deep Learning',
-    coverImage: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+    title: 'Belajar AI Deepseek Untuk Produktiviti',
+    coverImage: '/images/ebooks/eb-e-1.png',
     author: 'Dr. Alan Smith',
     description: 'This comprehensive guide covers everything from basic neural networks to advanced deep learning architectures. Perfect for both beginners and experienced practitioners looking to expand their knowledge.',
     category: 'Deep Learning',

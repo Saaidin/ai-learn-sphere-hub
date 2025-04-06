@@ -39,9 +39,11 @@ const EbookDetail = () => {
               <span className="text-gray-600">{ebook.pages} pages</span>
             </div>
             <p className="text-lg mb-6">{ebook.description}</p>
-            <Button className="w-full md:w-auto">
-              {ebook.freePreview ? 'Download Free Preview' : 'Purchase Ebook'}
-            </Button>
+            <a href="https://drive.google.com/file/d/1L6G7ltWZ1bGbHZlu9Y3BMUfLxC9Kj_83/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full md:w-auto">
+                {ebook.freePreview ? 'Download Free eBook' : 'Purchase Ebook'}
+              </Button>
+            </a>
           </div>
         </div>
       </main>
