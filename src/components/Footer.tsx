@@ -29,7 +29,7 @@ const Footer = () => {
               <a href="https://github.com" className="text-gray-400 hover:text-ai-primary">
                 <Github size={20} />
               </a>
-              <a href="mailto:dinme73@gmail.com" className="text-gray-400 hover:text-ai-primary">
+              <a href="mailto:saaidin@dinwebai.com" className="text-gray-400 hover:text-ai-primary">
                 <Mail size={20} />
               </a>
             </div>
