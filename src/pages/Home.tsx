@@ -124,7 +124,7 @@ const Home = () => {
 
       {/* Featured eBooks */}
       <FeaturedSection
-        title="AI eBooks"
+        title="eBooks"
         subtitle="Download comprehensive guides and resources"
         linkTo="/ebooks"
         linkText="View All eBooks"

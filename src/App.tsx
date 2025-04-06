@@ -5,6 +5,7 @@ import BlogEdit from '@/pages/BlogEdit';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
+import Index from '@/pages/Index';
 import Blog from '@/pages/Blog';
 import Videos from '@/pages/Videos';
 import Ebooks from '@/pages/Ebooks';
@@ -22,7 +23,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Index />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/new" element={<BlogNew />} />
         <Route path="/blog/edit/ai-coding-for-beginners" element={<BlogEdit />} />

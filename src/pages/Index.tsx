@@ -12,6 +12,8 @@ import { useBlogPosts, useVideos, useEbooks } from '@/data/mockData';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { BookOpen, Youtube, Book } from "lucide-react";
+import VibeCodeCard from '@/components/VibeCodeCard';
+ 
 
 const Index = () => {
   const { blogPosts } = useBlogPosts();
@@ -19,7 +21,6 @@ const Index = () => {
   const { ebooks } = useEbooks();
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
 
       <main className="flex-grow">
         {/* Hero Section */}
@@ -57,7 +58,7 @@ const Index = () => {
         
         {/* Featured eBooks */}
         <FeaturedSection 
-          title="AI eBooks Collection" 
+          title="eBooks Collection" 
           subtitle="Comprehensive guides for in-depth learning"
           linkTo="/ebooks"
           linkText="Browse All eBooks"
@@ -67,37 +68,54 @@ const Index = () => {
               <EbookCard key={ebook.id} ebook={ebook} />
             ))}
           </div>
+        <FeaturedSection
+          title="Featured Vibe-Coding"
+          subtitle="Explore our latest coding tutorials and challenges"
+          linkTo="/vibe-coding"
+          linkText="View All Vibe Coding"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                id: '1',
+                coverImage: '/images/vibe-code/vc-1.png',
+                title: 'Intro to JavaScript',
+                author: 'Jane Doe',
+                description: '',
+                category: '',
+                pages: 0,
+                freePreview: false,
+              },
+              {
+                id: '2',
+                coverImage: '/images/vibe-code/vc-2.png',
+                title: 'Mastering Python',
+                author: 'John Smith',
+                description: '',
+                category: '',
+                pages: 0,
+                freePreview: false,
+              },
+              {
+                id: '3',
+                coverImage: '/images/vibe-code/vc-3.png',
+                title: 'React for Beginners',
+                author: 'Alice Johnson',
+                description: '',
+                category: '',
+                pages: 0,
+                freePreview: false,
+              }
+            ].map(item => (
+              <VibeCodeCard key={item.id} vibeCode={item} />
+            ))}
+          </div>
+        </FeaturedSection>
         </FeaturedSection>
         
         {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-ai-primary to-ai-secondary text-white py-20">
-          <div className="container px-4 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Subscribe for Free AI Resources</h2>
-                <p className="text-lg mb-6 text-white/80">
-                  Join our community and get access to exclusive eBooks, tutorials, and AI learning materials. Stay updated with the latest advancements in artificial intelligence.
-                </p>
-                <div className="flex space-x-4">
-                  <div className="flex items-center space-x-2 bg-white/20 rounded-lg px-4 py-3">
-                    <BookOpen className="h-6 w-6" />
-                    <span>Weekly Updates</span>
-                  </div>
-                  <div className="flex items-center space-x-2 bg-white/20 rounded-lg px-4 py-3">
-                    <Book className="h-6 w-6" />
-                    <span>Free eBooks</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <SubscriptionForm />
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
 
-      <Footer />
     </div>
   );
 };
