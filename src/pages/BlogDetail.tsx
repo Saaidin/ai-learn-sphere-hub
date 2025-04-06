@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { deleteBlogPost } from '../lib/api/blog';
+import { useBlogPosts } from '@/data/mockData';
 
 const BlogDetail = () => {
   const { slug } = useParams();
+  const { blogPosts } = useBlogPosts();
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -20,23 +22,16 @@ const handleDelete = async () => {
 
 
   useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(`http://localhost:3000/api/blog?slug=${slug}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch blog post');
-        }
-        const data = await response.json();
-        setPost(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An unknown error occurred');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPost();
+    setLoading(true);
+    const foundPost = blogPosts.find((p) => p.slug === slug);
+    if (foundPost) {
+      setPost(foundPost);
+      setError(null);
+    } else {
+      setPost(null);
+      setError('Blog post not found');
+    }
+    setLoading(false);
   }, [slug]);
 
   if (loading) {

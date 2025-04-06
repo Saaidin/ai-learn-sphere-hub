@@ -71,7 +71,7 @@ const Navbar = () => {
           <Link to="/blog" className="text-gray-600 hover:text-ai-primary font-medium">Blog</Link>
           <Link to="/videos" className="text-gray-600 hover:text-ai-primary font-medium">Videos</Link>
           <Link to="/ebooks" className="text-gray-600 hover:text-ai-primary font-medium">eBooks</Link>
-          <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium">Vibe Coding</Link>
+          <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium">Vibe-Coding</Link>
           <Link to="/donate">
             <Button className="bg-ai-secondary hover:bg-ai-accent">
               Support Us
