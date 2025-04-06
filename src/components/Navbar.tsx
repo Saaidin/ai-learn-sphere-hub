@@ -51,8 +51,8 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto sm:px-6">
         <Link to="/" className="flex items-center space-x-2">
-          <div className="bg-gradient-to-r from-ai-primary to-ai-secondary rounded-md p-1.5">
-            <BookOpen className="h-6 w-6 text-white" />
+          <div className="rounded-md p-1.5">
+            <img src="/images/logo.png" alt="AI Learning Platform Logo" className="h-6 w-auto" />
           </div>
           <span className="text-xl font-bold text-ai-dark">AI Learning Platform</span>
         </Link>
