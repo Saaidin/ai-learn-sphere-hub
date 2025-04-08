@@ -29,12 +29,12 @@ const Index = () => {
         {/* Featured Blog Posts */}
         <FeaturedSection 
           title="Latest Blog Posts" 
-          subtitle="Stay updated with our most recent AI learning articles"
+          subtitle="Stay updated with our most recent learning articles"
           linkTo="/blog"
           linkText="View All Posts"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post: BlogPost) => (
+            {blogPosts.slice(0, 3).map((post: BlogPost) => (
               <BlogPostCard key={post.id} post={post} />
             ))}
           </div>
@@ -49,7 +49,7 @@ const Index = () => {
             linkText="Explore All Videos"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {videos.map((video: Video) => (
+              {videos.slice(0, 3).map((video: Video) => (
                 <VideoCard key={video.id} video={video} />
               ))}
             </div>
@@ -64,13 +64,15 @@ const Index = () => {
           linkText="Browse All eBooks"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {ebooks.map((ebook: Ebook) => (
+            {ebooks.slice(0, 3).map((ebook: Ebook) => (
               <EbookCard key={ebook.id} ebook={ebook} />
             ))}
           </div>
+          
+        {/* Featured Vibe-Coding Projects */}
         <FeaturedSection
-          title="Featured Vibe-Coding"
-          subtitle="Explore our latest coding tutorials and challenges"
+          title="Vibe-Coding Projects"
+          subtitle="Explore our latest coding tutorials and projects"
           linkTo="/vibe-coding"
           linkText="View All Vibe Coding"
         >

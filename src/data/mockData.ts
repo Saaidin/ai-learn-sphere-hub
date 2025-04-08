@@ -9,20 +9,20 @@ export const useBlogPosts = () => {
       coverImage: '/images/blog_section/blog-article-1.jpg',
       date: 'Apr 8, 2025',
       author: 'Saaidin Mat Esa',
-      category: 'Blog-Article',
+      category: 'Vibe-Coding',
       slug: 'vibe-coding-future',
       content: 'The rest of articles read <a href="https://qr.ae/pAv8XU" style="text-decoration: underline; color: blue;">here</a>.'
     },
   {
     id: '1',
-    title: 'Getting Started with Machine Learning: A Beginner\'s Guide',
-    excerpt: 'Learn the fundamentals of machine learning and how to implement your first ML models with Python and TensorFlow.',
+    title: 'Getting Started with Vibe Coding: A Beginner\'s Guide',
+    excerpt: 'Have you ever heard of "Vibe Coding"? It’s not just about writing code—it’s about enjoying the process, staying in a flow state, and creating in a way that feels natural and fun. Whether you\'re a complete beginner or an experienced developer looking to refine your approach, this guide will help you embrace Vibe Coding and make programming a more enjoyable—and even profitable—experience.',
     coverImage: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1024',
-    date: 'Nov 5, 2023',
-    author: 'Dr. Sarah Johnson',
-    category: 'Machine Learning',
-    slug: 'getting-started-with-machine-learning',
-    content: 'This is a detailed guide on getting started with machine learning, covering the basics and providing practical examples using Python and TensorFlow.'
+    date: 'April 8, 2025',
+    author: 'Saaidin Mat Esa',
+    category: 'Vibe-Coding',
+    slug: 'getting-started-with-vibe-coding',
+    content: 'The rest of articles read <a href="https://qr.ae/pAvnWJ" style="text-decoration: underline; color: blue;">here</a>'
   },
   {
     id: '2',
