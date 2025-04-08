@@ -32,7 +32,7 @@ const BlogPost = () => {
             className="w-full h-96 object-cover rounded-lg mb-8"
           />
           <div className="prose max-w-none">
-            <p>{post.content}</p>
+            <p dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
         </article>
       </main>

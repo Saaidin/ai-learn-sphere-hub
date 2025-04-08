@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/new" element={<BlogNew />} />
-        <Route path="/blog/edit/ai-coding-for-beginners" element={<BlogEdit />} />
+        <Route path="/blog/edit/vibe-coding-future" element={<BlogEdit />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/ebooks" element={<Ebooks />} />
         <Route path="/ebooks/:id" element={<EbookDetail />} />

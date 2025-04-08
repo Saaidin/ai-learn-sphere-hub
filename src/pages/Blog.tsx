@@ -55,14 +55,6 @@ const Blog = () => {
       
       <main className="flex-grow">
         {/* New Post Button */}
-        <div className="container px-4 mx-auto text-center mt-8">
-          <button
-            className="bg-ai-primary hover:bg-ai-primary-dark text-white font-bold py-2 px-6 rounded-lg transition-colors"
-            onClick={() => window.location.href = '/blog/new'}
-          >
-            New Post
-          </button>
-        </div>
         
         {/* Search & Filters */}
         <div className="container px-4 mx-auto py-8">

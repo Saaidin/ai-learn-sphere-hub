@@ -4,14 +4,14 @@ export const useBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState([
     {
       id: '0',
-      title: 'AI Coding for beginners',
-      excerpt: 'This is an auto-generated excerpt for "AI Coding for beginners"',
-      coverImage: 'https://th.bing.com/th/id/OIP.l8R_QazvDGzDP7imMbNHmwHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7',
-      date: 'Apr 5, 2025',
-      author: 'AI Assistant',
-      category: 'AI',
-      slug: 'ai-coding-for-beginners',
-      content: '# AI Coding for beginners\n\nStart writing your content here...'
+      title: 'Vibe Coding is the Future: Why Developers Should Embrace the Flow?',
+      excerpt: 'Vibe Coding is more than just writing lines of code—it’s about entering a flow state where creativity, productivity, and enjoyment merge. It’s coding in an environment that fuels inspiration, whether that means working with great music, in a cozy setup, or surrounded by like-minded developers."',
+      coverImage: '/images/blog_section/blog-article-1.jpg',
+      date: 'Apr 8, 2025',
+      author: 'Saaidin Mat Esa',
+      category: 'Blog-Article',
+      slug: 'vibe-coding-future',
+      content: 'The rest of articles read <a href="https://qr.ae/pAv8XU" style="text-decoration: underline; color: blue;">here</a>.'
     },
   {
     id: '1',

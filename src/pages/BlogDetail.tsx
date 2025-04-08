@@ -69,23 +69,9 @@ const handleDelete = async () => {
           <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
           <p className="text-xl text-gray-600 mb-8">{post.excerpt}</p>
           <div className="prose max-w-none whitespace-pre-wrap">
-            {post.content}
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
         </article>
-        <div className="mt-6 flex gap-4">
-          <button
-            onClick={() => window.location.href = `/blog/edit/${slug}`}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded"
-          >
-            Edit
-          </button>
-          <button
-            onClick={handleDelete}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded"
-          >
-            Delete
-          </button>
-        </div>
       </main>
     </div>
   );
