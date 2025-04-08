@@ -10,9 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-ai-primary to-ai-secondary rounded-md p-1.5">
-                <BookOpen className="h-6 w-6 text-white" />
-              </div>
+              <img src="/images/logo.png" alt="AI Learning Platform Logo" className="h-10" />
               <span className="text-xl font-bold text-ai-dark">AI Learning Platform</span>
             </Link>
             <p className="mt-4 text-gray-600">

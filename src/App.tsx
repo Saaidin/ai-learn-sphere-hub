@@ -16,6 +16,7 @@ import Donate from '@/pages/Donate';
 import Admin from '@/pages/Admin';
 import VibeCodeDetail from '@/pages/VibeCodeDetail';
 import VibeCoding from '@/pages/VibeCoding';
+import AffiliatePage from '@/pages/AffiliatePage';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/vibe-coding/:id" element={<VibeCodeDetail />} />
         <Route path="/vibe-coding" element={<VibeCoding />} />
+        <Route path="/affiliate" element={<AffiliatePage />} />
       </Routes>
       <Footer />
     </>
