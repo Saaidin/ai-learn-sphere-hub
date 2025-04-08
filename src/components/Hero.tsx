@@ -25,10 +25,10 @@ const Hero = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-ai-primary text-ai-primary hover:bg-ai-light">
-                <Link to="/subscribe">
+                <a href="http://localhost:8080/donate">
                   <Book className="mr-2 h-5 w-5" />
                   Get Free eBooks
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
