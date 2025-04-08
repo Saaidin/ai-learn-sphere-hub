@@ -11,7 +11,7 @@ export const useBlogPosts = () => {
       author: 'Saaidin Mat Esa',
       category: 'Vibe-Coding',
       slug: 'vibe-coding-future',
-      content: 'The rest of articles read <a href="https://qr.ae/pAv8XU" style="text-decoration: underline; color: blue;">here</a>.'
+      content: 'The rest of articles read <a href="https://qr.ae/pAv8XU" style="text-decoration: underline; color: blue;" target="_blank">here</a>.'
     },
   {
     id: '1',
@@ -22,18 +22,18 @@ export const useBlogPosts = () => {
     author: 'Saaidin Mat Esa',
     category: 'Vibe-Coding',
     slug: 'getting-started-with-vibe-coding',
-    content: 'The rest of articles read <a href="https://qr.ae/pAvnWJ" style="text-decoration: underline; color: blue;">here</a>'
+    content: 'The rest of articles read <a href="https://qr.ae/pAvnWJ" style="text-decoration: underline; color: blue;" target="_blank">here</a>'
   },
   {
     id: '2',
-    title: 'Understanding Large Language Models: From GPT-3 to GPT-4',
-    excerpt: 'Explore the evolution of language models and how they\'re revolutionizing natural language processing in applications today.',
-    coverImage: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1024',
-    date: 'Oct 22, 2023',
-    author: 'Michael Chen',
-    category: 'NLP',
+    title: 'Why Visual Studio Code is the Perfect Code Editor for Beginners',
+    excerpt: 'Choosing the right code editor is one of the first—and most important—decisions a beginner programmer makes. With so many options available, it can be overwhelming to pick the best one. However, Visual Studio Code (VS Code) stands out as the perfect choice for beginners.',
+    coverImage: '/images/blog_section/blog-article-2.png',
+    date: 'April 8, 2025',
+    author: 'Saaidin Mat Esa',
+    category: 'Vibe-Coding',
     slug: 'understanding-large-language-models',
-    content: 'This article explores the development of large language models, their architecture, and their impact on natural language processing.'
+    content: 'The rest of articles read <a href="https://qr.ae/pAvKtg" style="text-decoration: underline; color: blue;" target="_blank">here</a>'
   },
   {
     id: '3',
