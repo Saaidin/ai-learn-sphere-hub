@@ -89,12 +89,20 @@ export const useBlogPosts = () => {
     const [videos, setVideos] = useState([
     {
       id: '1',
-      title: 'Introduction to Neural Networks',
-      thumbnailUrl: 'https://i.ytimg.com/vi/aircAruvnKk/maxresdefault.jpg',
-      youtubeId: 'aircAruvnKk',
-      duration: '18:42',
-      description: 'Learn the basic structure and functionality of neural networks in this beginner-friendly tutorial.',
-      category: 'Deep Learning'
+      title: 'Belajar Deepseek AI Untuk Meningkatkan Produktiviti',
+      thumbnailUrl: '/images/video_section/ebook-cover-deepseek.png',
+      youtubeId: 'kq9LPGRnWWE',
+      duration: '1:49',
+      description: 'Berikut ialah strategi utama untuk memanfaatkan DeepSeek AI untuk meningkatkan produktiviti dan penjanaan kekayaan. Sila menonton keseluruhan perbincangannya di dalam YouTube.',
+      timestamps: 
+      `      Pengenalan 0:00 - 0:08
+      Automate Repetitive Tasks 0:08 - 0:25
+      Data-Driven Decisions 0:25 - 0:40
+      AI-Powered Marketing & Sales 0:40 - 0:55
+      Cost Savings 0:55 - 1:07
+      AI Staff Training 1:07 - 1:25
+      Kesimpulan 1:25 - 1:49`,
+      category: 'Produktiviti'
     },
     {
       id: '2',

@@ -35,6 +35,9 @@ const VideoDetail = () => {
           </span>
         </div>
         <p className="text-lg text-gray-700">{video.description}</p>
+        {video.timestamps && (
+          <pre className="whitespace-pre-wrap mt-4 text-gray-800">{video.timestamps}</pre>
+        )}
       </main>
     </div>
   );
