@@ -16,24 +16,17 @@ const AffiliateContext = createContext<AffiliateContextType | undefined>(undefin
 const initialAffiliates: Affiliate[] = [
   {
     id: "1",
-    name: "Amazon Associates",
-    company: "Amazon",
-    website: "https://amazon.com",
-    affiliateLink: "https://amazon.com/ref=johndoe",
+    name: "Referral Program",
+    company: "Hostinger",
+    website: "https://hpanel.hostinger.com/referrals",
+    affiliateLink: "https://hostinger.com?REFERR...",
   },
   {
     id: "2",
-    name: "Shopify Partners",
-    company: "Shopify",
-    website: "https://shopify.com",
-    affiliateLink: "https://shopify.com/?ref=janesmith",
-  },
-  {
-    id: "3",
-    name: "eBay Partner Network",
-    company: "eBay",
-    website: "https://ebay.com",
-    affiliateLink: "https://ebay.com/ref=mikejohnson",
+    name: "ThriveCart",
+    company: "Designrr",
+    website: "https://thrivecart.com/affiliates",
+    affiliateLink: "https://sbmetm73--page1.thri...",
   },
 ];
 
