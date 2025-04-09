@@ -47,7 +47,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-gray-600">Email: saaidin@dinwebai.com</li>
-              <li><Link to="/subscribe" className="text-gray-600 hover:text-ai-primary">Subscribe</Link></li>
+              <li><Link to="/donate" className="text-gray-600 hover:text-ai-primary">Subscribe</Link></li>
             </ul>
           </div>
         </div>

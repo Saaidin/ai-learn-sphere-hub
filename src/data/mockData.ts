@@ -147,7 +147,7 @@ export const useBlogPosts = () => {
       coverImage: '/images/ebooks/eb-d-1.png',
       author: 'Saaidin Mat Esa',
       description: 'Berikut ialah strategi utama untuk memanfaatkan DeepSeek AI untuk meningkatkan produktiviti dan penjanaan kekayaan. Antaranya adalah Automatikkan Tugasan Berulang untuk Manfaatkan Masa terluang, Manfaatkan AI untuk Pembuatan Keputusan Berdasarkan Data, Skalakan Hasil dengan Pemasaran & Jualan Dikuasakan AI dan lain-lain.',
-      category: 'eBooks Learning',
+      category: 'Vibe-Coding',
       pages: 6,
       freePreview: true,
       publishedDate: 'April 6, 2025',
@@ -164,14 +164,16 @@ export const useBlogPosts = () => {
     },
     {
       id: '2',
-      title: 'Mastering Natural Language Processing',
-      coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-      author: 'Dr. Maria Garcia',
-      description: 'A complete reference for NLP techniques from traditional methods to cutting-edge transformer models. Includes practical examples and code snippets.',
-      category: 'NLP',
-      pages: 320,
+      title: 'Masa Depan Pengaturcaraan Yang Lebih Produktif & Menyeronokkan',
+      coverImage: '/images/ebooks/ebook-2.png',
+      author: 'Saaidin Mat Esa',
+      description: `Dalam dunia pembangunan perisian yang pantas, tekanan dan burnout adalah musuh utama
+      kreativiti. Vibe Coding muncul sebagai pendekatan revolusioner yang menggabungkan
+      produktiviti, keselesaan, dan keseronokan dalam menulis kod.`,
+      category: 'Vibe-Coding',
+      pages: 19,
       freePreview: false,
-      publishedDate: 'June 10, 2023',
+      publishedDate: 'April 9, 2025',
       isbn: '978-1-23-456789-0',
       downloadLink: '/downloads/nlp-mastery.pdf',
       tableOfContents: [
