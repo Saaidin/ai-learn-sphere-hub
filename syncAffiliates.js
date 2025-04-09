@@ -1,12 +1,18 @@
-const fetch = require('node-fetch');
-
-const LOCAL_API = 'http://localhost:8080/api/affiliates';
+const LOCAL_API = 'http://localhost:3001/api/affiliates';
 const PROD_API = 'https://www.dinwebai.com/api/affiliates';
 
 async function syncAffiliates() {
   try {
-    console.log('Fetching affiliates from local...');
+    console.log('Fetching affiliates from local backend...');
     const res = await fetch(LOCAL_API);
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      const text = await res.text();
+      console.error(`Unexpected response from local API (status ${res.status}):\n${text}`);
+      return;
+    }
+
     const affiliates = await res.json();
 
     for (const affiliate of affiliates) {
@@ -30,4 +36,4 @@ async function syncAffiliates() {
   }
 }
 
-syncAffiliates();
+await syncAffiliates();
