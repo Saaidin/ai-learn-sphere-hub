@@ -23,10 +23,11 @@ async function syncAffiliates() {
         body: JSON.stringify(affiliate),
       });
 
+      const responseText = await response.text();
       if (!response.ok) {
-        console.error(`Failed to sync ${affiliate.name}:`, await response.text());
+        console.error(`Failed to sync ${affiliate.name} (Status ${response.status}): ${responseText}`);
       } else {
-        console.log(`Synced ${affiliate.name}`);
+        console.log(`Synced ${affiliate.name} (Status ${response.status}): ${responseText}`);
       }
     }
 

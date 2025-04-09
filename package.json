@@ -24,6 +24,7 @@
     "lovable-tagger": "^1.1.8",
     "lucide-react": "^0.487.0",
     "next": "^15.2.4",
+    "node-fetch": "^3.3.2",
     "pg": "^8.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
