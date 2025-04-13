@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-bold text-ai-dark mb-4">
-              Master AI with Expert Resources
+              From Beginner to Pro: My AI Learning Journey
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8">
               Explore our collection of curated blog posts, instructional videos, 
