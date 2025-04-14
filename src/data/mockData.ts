@@ -106,12 +106,18 @@ export const useBlogPosts = () => {
     },
     {
       id: '2',
-      title: 'Building a Chatbot with Transformers',
-      thumbnailUrl: 'https://i.ytimg.com/vi/TQQlZhbC5ps/maxresdefault.jpg',
-      youtubeId: 'TQQlZhbC5ps',
-      duration: '24:15',
-      description: 'Step-by-step guide to creating your own AI chatbot using transformer models and Python.',
-      category: 'NLP'
+      title: 'Vibe Coding – Masa Depan Pengaturcaraan Yang Lebih Produktif dan Menyeronokkan',
+      thumbnailUrl: '/images/video_section/v-2.png',
+      youtubeId: 'fYH2DyNFWHc',
+      duration: '4:49',
+      description: 'Vibe Coding adalah lebih daripada sekadar menulis baris kod—ia mengenai memasuki keadaan aliran di mana kreativiti, produktiviti dan keseronokan bergabung. Ia adalah pengekodan dalam persekitaran yang menjana inspirasi, sama ada itu bermakna bekerja dengan muzik yang hebat, dalam persediaan yang selesa atau dikelilingi oleh pembangun yang berfikiran sama.',
+      timestamps: 
+        `      00:00:00 - Vibe Coding: Future of Dev
+
+      02:09:20 - Vibe Coding & Remote Work
+
+      04:18:30 - Ideal Work Environment`,
+      category: 'Produktiviti'
     },
     {
       id: '3',
