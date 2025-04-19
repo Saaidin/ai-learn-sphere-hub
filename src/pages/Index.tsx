@@ -9,6 +9,7 @@ import VideoCard, { Video } from '@/components/VideoCard';
 import EbookCard, { Ebook } from '@/components/EbookCard';
 import SubscriptionForm from '@/components/SubscriptionForm';
 import { useBlogPosts, useVideos, useEbooks } from '@/data/mockData';
+import { vibeCodingItems } from '@/data/vibeCodingData';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { BookOpen, Youtube, Book } from "lucide-react";
@@ -77,38 +78,7 @@ const Index = () => {
           linkText="View All Vibe Coding"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                id: '1',
-                coverImage: '/images/vibe-code/vc-1.png',
-                title: 'Intro to JavaScript',
-                author: 'Jane Doe',
-                description: '',
-                category: '',
-                pages: 0,
-                freePreview: false,
-              },
-              {
-                id: '2',
-                coverImage: '/images/vibe-code/vc-2.png',
-                title: 'Mastering Python',
-                author: 'John Smith',
-                description: '',
-                category: '',
-                pages: 0,
-                freePreview: false,
-              },
-              {
-                id: '3',
-                coverImage: '/images/vibe-code/vc-3.png',
-                title: 'React for Beginners',
-                author: 'Alice Johnson',
-                description: '',
-                category: '',
-                pages: 0,
-                freePreview: false,
-              }
-            ].map(item => (
+            {vibeCodingItems.slice(0, 3).map(item => (
               <VibeCodeCard key={item.id} vibeCode={item} />
             ))}
           </div>
