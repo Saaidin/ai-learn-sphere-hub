@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Mail, Twitter, Linkedin, Github } from "lucide-react";
+import { BookOpen, Mail, Twitter, Facebook, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,16 +18,19 @@ const Footer = () => {
               videos, and eBooks to enhance your understanding of artificial intelligence.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://twitter.com" className="text-gray-400 hover:text-ai-primary">
+              <a href="https://x.com/din_webdev" className="text-gray-400 hover:text-ai-primary" title="Twitter profile">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-400 hover:text-ai-primary">
+              <a href="https://www.facebook.com" className="text-gray-400 hover:text-ai-primary" title="Facebook profile">
+                <Facebook size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/dinwebai" className="text-gray-400 hover:text-ai-primary" title="LinkedIn profile">
                 <Linkedin size={20} />
               </a>
-              <a href="https://github.com" className="text-gray-400 hover:text-ai-primary">
+              <a href="https://github.com/Saaidin" className="text-gray-400 hover:text-ai-primary" title="GitHub profile">
                 <Github size={20} />
               </a>
-              <a href="mailto:saaidin@dinwebai.com" className="text-gray-400 hover:text-ai-primary">
+              <a href="mailto:saaidin@dinwebai.com" className="text-gray-400 hover:text-ai-primary" title="Email contact">
                 <Mail size={20} />
               </a>
             </div>
