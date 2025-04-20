@@ -28,9 +28,19 @@ const VibeCodeDetail: React.FC = () => {
           <h1 className="text-3xl font-bold mb-4">{vibeCode.title}</h1>
           <p className="text-lg text-gray-700 mb-2">By {vibeCode.author}</p>
           <p className="text-gray-800 mb-6">{vibeCode.description}</p>
+          {vibeCode.id === '1' && (
+            <a href="https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-website_68049aaa.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block mr-4">
+              Download eBook
+            </a>
+          )}
           <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
             Have A Look My Website
           </a>
+          {vibeCode.id === '3' && (
+            <a href={vibeCode.downloadLink} target="_blank" rel="noopener noreferrer" className="ml-4 px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block">
+              Download Ebook
+            </a>
+          )}
         </div>
       </div>
     </div>

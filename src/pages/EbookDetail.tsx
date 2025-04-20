@@ -39,7 +39,7 @@ const EbookDetail = () => {
               <span className="text-gray-600">{ebook.pages} pages</span>
             </div>
             <p className="text-lg mb-6">{ebook.description}</p>
-            <a href="https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/vibe-coding-masa-depan-pengaturcaraan-yang-lebih-produktif-menyeronokkan_67f689e8.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={ebook.downloadLink} target="_blank" rel="noopener noreferrer">
               <Button className="w-full md:w-auto">
                 Read Ebook Free
               </Button>

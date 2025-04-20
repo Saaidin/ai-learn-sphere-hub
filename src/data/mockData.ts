@@ -158,15 +158,8 @@ export const useBlogPosts = () => {
       freePreview: true,
       publishedDate: 'April 6, 2025',
       isbn: '978-3-16-148410-0',
-      downloadLink: '/downloads/deep-learning-guide.pdf',
-      tableOfContents: [
-        'Introduction to Neural Networks',
-        'Backpropagation Explained',
-        'Convolutional Neural Networks',
-        'Recurrent Neural Networks',
-        'Transformers and Attention',
-        'Practical Applications'
-      ]
+      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/tingkatkan-produktiviti-dengan-strategi-deepseek_68049c6f.pdf',
+      tableOfContents: [ ]
     },
     {
       id: '2',
@@ -181,33 +174,23 @@ export const useBlogPosts = () => {
       freePreview: false,
       publishedDate: 'April 9, 2025',
       isbn: '978-1-23-456789-0',
-      downloadLink: '/downloads/nlp-mastery.pdf',
+      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/vibe-coding-masa-depan-pengaturcaraan-yang-lebih-produktif-menyeronokkan_6804a145.pdf',
       tableOfContents: [
-        'Text Preprocessing',
-        'Word Embeddings',
-        'Sequence Models',
-        'Transformer Architectures',
-        'Deployment Strategies'
       ]
     },
     {
       id: '3',
-      title: 'Computer Vision Fundamentals',
-      coverImage: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e',
-      author: 'Prof. James Wilson',
-      description: 'Learn computer vision from the ground up with this hands-on guide covering OpenCV, TensorFlow, and PyTorch implementations.',
-      category: 'Computer Vision',
-      pages: 275,
+      title: 'Pengalaman Saya Membuat Website Sendiri',
+      coverImage: '/images/ebooks/ebook-3.png',
+      author: 'Saaidin Mat Esa',
+      description: 'Saya telah membuat website sendiri menggunakan Next.js. Dalam ebook ini, saya akan berkongsi pengalaman dan langkah-langkah yang saya ambil untuk membina website tersebut.',
+      category: 'Vibe-Coding',
+      pages: 6,
       freePreview: true,
-      publishedDate: 'January 5, 2024',
+      publishedDate: 'Aril 20, 2025',
       isbn: '978-0-12-345678-9',
-      downloadLink: '/downloads/cv-fundamentals.pdf',
-      tableOfContents: [
-        'Image Processing Basics',
-        'Feature Detection',
-        'Object Recognition',
-        'Neural Networks for CV',
-        'Real-time Applications'
+      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-website_68049aaa.pdf',
+      tableOfContents: [      
       ]
     }
   ]);
