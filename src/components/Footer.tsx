@@ -21,7 +21,7 @@ const Footer = () => {
               <a href="https://x.com/din_webdev" className="text-gray-400 hover:text-ai-primary" title="Twitter profile">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.facebook.com" className="text-gray-400 hover:text-ai-primary" title="Facebook profile">
+              <a href="https://www.facebook.com/saaidin73" className="text-gray-400 hover:text-ai-primary" title="Facebook profile">
                 <Facebook size={20} />
               </a>
               <a href="https://www.linkedin.com/in/dinwebai" className="text-gray-400 hover:text-ai-primary" title="LinkedIn profile">
