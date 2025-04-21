@@ -121,12 +121,12 @@ export const useBlogPosts = () => {
     },
     {
       id: '3',
-      title: 'Reinforcement Learning Explained',
-      thumbnailUrl: 'https://i.ytimg.com/vi/2pWv7GOvuf0/maxresdefault.jpg',
-      youtubeId: '2pWv7GOvuf0',
-      duration: '32:18',
-      description: 'Understanding the principles behind reinforcement learning algorithms and their applications.',
-      category: 'Reinforcement Learning'
+      title: 'Pengalaman Sebagai Vibe Coder dan Membina Website Sendiri',
+      thumbnailUrl: '/images/video_section/v-3.png',
+      youtubeId: 'Zf3xiUW6yxk',
+      duration: '3:03',
+      description: 'Kita bertuah dapat merasakan perkembangan AI sejak akhir-akhir ini, terutamanya mengenai vibe coding. Sesiapa pun dapat melakukan kerja contohnya membina website. Tetapi perlu ada pra-syaratnya iaitu kita perlu tahu sedikit-sebanyak asas mengkoding terutamanya, contohnya seperti NextJS, Tailwind CSS, Prisma, MongoDB database, dan sebagainya.',
+      category: 'Vibe-Coding'
     }
     ]);
   
