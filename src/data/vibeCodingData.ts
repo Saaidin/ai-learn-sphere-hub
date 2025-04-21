@@ -2,7 +2,7 @@ export const vibeCodingItems = [
   {
     id: '1',
     coverImage: '/images/web-img/wc-1.jpg',
-    title: 'Build Website with Help of AI',
+    title: 'AI-Amazona: Ecommerce Website',
     author: 'Saaidin Mat Esa',
     description: 'Ketahui cara membuat tapak web yang digunakan masakini dengan bantuan alatan AI. Saya ingin kongsikan pengetahuan asas untuk membantu Vibe Coder yang baru.',
     downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-website_68049aaa.pdf',
