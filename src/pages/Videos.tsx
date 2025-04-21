@@ -9,7 +9,7 @@ const Videos = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">AI Video Tutorials</h1>
+        <h1 className="text-4xl font-bold mb-8">My Video Collection</h1>
         {videos.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {videos.map(video => (
