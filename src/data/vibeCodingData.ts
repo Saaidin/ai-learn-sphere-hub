@@ -13,14 +13,14 @@ export const vibeCodingItems = [
   },
   {
     id: '2',
-    coverImage: '/images/vibe-code/vc-2.png',
-    title: 'Mastering Python',
-    author: 'John Smith',
-    description: 'Deep dive into Python for data science and automation. This guide explores advanced Python features, libraries, and best practices.',
+    coverImage: '/images/web-img/wc-2.png',
+    title: 'ShopCart: Ecommerce Website',
+    author: 'Saaidin Mat Esa',
+    description: 'Website ecommerce yang dibina menggunakan Next.js dan Tailwind CSS. Saya ingin kongsikan pengetahuan asas untuk membantu Vibe Coder yang baru.',
     category: 'Programming',
     pages: 120,
     freePreview: false,
-    websiteUrl: 'https://example.com/python-course'
+    websiteUrl: 'https://shopcart-teal.vercel.app'
   },
   {
     id: '3',
