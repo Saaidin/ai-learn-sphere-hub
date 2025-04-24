@@ -33,11 +33,16 @@ const VibeCodeDetail: React.FC = () => {
               Download eBook
             </a>
           )}
+          {vibeCode.id === '2' && (
+            <a href="https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-shopcart-website_680a39df.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block mr-4">
+              Download eBook
+            </a>
+          )}
           <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
             Have A Look My Website
           </a>
           {vibeCode.id === '3' && (
-            <a href={vibeCode.downloadLink} target="_blank" rel="noopener noreferrer" className="ml-4 px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block">
+            <a href={vibeCode.downloadLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block mr-4">
               Download Ebook
             </a>
           )}

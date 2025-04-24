@@ -145,55 +145,75 @@ export const useBlogPosts = () => {
     return { videos, addVideo, updateVideo, deleteVideo };
   };
   
+  import { useEffect } from 'react';
+
   export const useEbooks = () => {
     const [ebooks, setEbooks] = useState([
-    {
-      id: '1',
-      title: 'Belajar AI Deepseek Untuk Produktiviti Tinggi',
-      coverImage: '/images/ebooks/eb-d-1.png',
-      author: 'Saaidin Mat Esa',
-      description: 'Berikut ialah strategi utama untuk memanfaatkan DeepSeek AI untuk meningkatkan produktiviti dan penjanaan kekayaan. Antaranya adalah Automatikkan Tugasan Berulang untuk Manfaatkan Masa terluang, Manfaatkan AI untuk Pembuatan Keputusan Berdasarkan Data, Skalakan Hasil dengan Pemasaran & Jualan Dikuasakan AI dan lain-lain.',
-      category: 'Vibe-Coding',
-      pages: 6,
-      freePreview: true,
-      publishedDate: 'April 6, 2025',
-      isbn: '978-3-16-148410-0',
-      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/tingkatkan-produktiviti-dengan-strategi-deepseek_68049c6f.pdf',
-      tableOfContents: [ ]
-    },
-    {
-      id: '2',
-      title: 'Masa Depan Pengaturcaraan Yang Lebih Produktif & Menyeronokkan',
-      coverImage: '/images/ebooks/ebook-2.png',
-      author: 'Saaidin Mat Esa',
-      description: `Dalam dunia pembangunan perisian yang pantas, tekanan dan burnout adalah musuh utama
-      kreativiti. Vibe Coding muncul sebagai pendekatan revolusioner yang menggabungkan
-      produktiviti, keselesaan, dan keseronokan dalam menulis kod.`,
-      category: 'Vibe-Coding',
-      pages: 19,
-      freePreview: false,
-      publishedDate: 'April 9, 2025',
-      isbn: '978-1-23-456789-0',
-      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/vibe-coding-masa-depan-pengaturcaraan-yang-lebih-produktif-menyeronokkan_6804a145.pdf',
-      tableOfContents: [
-      ]
-    },
-    {
-      id: '3',
-      title: 'Pengalaman Saya Membuat Website Sendiri',
-      coverImage: '/images/ebooks/ebook-3.png',
-      author: 'Saaidin Mat Esa',
-      description: 'Saya telah membuat website sendiri menggunakan Next.js. Dalam ebook ini, saya akan berkongsi pengalaman dan langkah-langkah yang saya ambil untuk membina website tersebut.',
-      category: 'Vibe-Coding',
-      pages: 6,
-      freePreview: true,
-      publishedDate: 'Aril 20, 2025',
-      isbn: '978-0-12-345678-9',
-      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-website_68049aaa.pdf',
-      tableOfContents: [      
-      ]
-    }
-  ]);
+      {
+        id: '1',
+        title: 'Belajar AI Deepseek Untuk Produktiviti Tinggi',
+        coverImage: '/images/ebooks/eb-d-1.png',
+        author: 'Saaidin Mat Esa',
+        description: 'Berikut ialah strategi utama untuk memanfaatkan DeepSeek AI untuk meningkatkan produktiviti dan penjanaan kekayaan. Antaranya adalah Automatikkan Tugasan Berulang untuk Manfaatkan Masa terluang, Manfaatkan AI untuk Pembuatan Keputusan Berdasarkan Data, Skalakan Hasil dengan Pemasaran & Jualan Dikuasakan AI dan lain-lain.',
+        category: 'Vibe-Coding',
+        pages: 6,
+        freePreview: true,
+        publishedDate: 'April 6, 2025',
+        isbn: '978-3-16-148410-0',
+        downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/tingkatkan-produktiviti-dengan-strategi-deepseek_68049c6f.pdf',
+        tableOfContents: []
+      },
+      {
+        id: '2',
+        title: 'Masa Depan Pengaturcaraan Yang Lebih Produktif & Menyeronokkan',
+        coverImage: '/images/ebooks/ebook-2.png',
+        author: 'Saaidin Mat Esa',
+        description: `Dalam dunia pembangunan perisian yang pantas, tekanan dan burnout adalah musuh utama
+        kreativiti. Vibe Coding muncul sebagai pendekatan revolusioner yang menggabungkan
+        produktiviti, keselesaan, dan keseronokan dalam menulis kod.`,
+        category: 'Vibe-Coding',
+        pages: 19,
+        freePreview: false,
+        publishedDate: 'April 9, 2025',
+        isbn: '978-1-23-456789-0',
+        downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/vibe-coding-masa-depan-pengaturcaraan-yang-lebih-produktif-menyeronokkan_6804a145.pdf',
+        tableOfContents: []
+      },
+      {
+        id: '3',
+        title: 'Pengalaman Saya Membuat Website Sendiri',
+        coverImage: '/images/ebooks/ebook-3.png',
+        author: 'Saaidin Mat Esa',
+        description: 'Saya telah membuat website sendiri menggunakan Next.js. Dalam ebook ini, saya akan berkongsi pengalaman dan langkah-langkah yang saya ambil untuk membina website tersebut.',
+        category: 'Vibe-Coding',
+        pages: 6,
+        freePreview: true,
+        publishedDate: 'Aril 20, 2025',
+        isbn: '978-0-12-345678-9',
+        downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-website_68049aaa.pdf',
+        tableOfContents: []
+      },
+      {
+        id: '4',
+        title: 'Bagaimana Saya Membina Semula Website ShopCart? Sebuah Kajian Kes',
+        coverImage: '/images/ebooks/ebook-4.png',
+        author: 'Saaidin Mat Esa',
+        description: ' Saya akan kongsi dengan anda cara membuat website ShopCart ini untuk tujuan pembelajaran. Saya akui website originality daripada web developer yang lain.',
+        category: 'Vibe-Coding',
+        pages: 7,
+        freePreview: true,
+        publishedDate: 'Aril 24, 2025',
+        isbn: '978-0-12-345678-9',
+        downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/how-to-build-shopcart-website_680a39df.pdf',
+        tableOfContents: []
+      }
+    ]);
+
+    useEffect(() => {
+      // Move ebook with id '4' to the beginning
+      const sortedEbooks = [...ebooks].sort((a, b) => (a.id === '4' ? -1 : b.id === '4' ? 1 : 0));
+      setEbooks(sortedEbooks);
+    }, []);
   
     const addEbook = (ebook) => {
       setEbooks([...ebooks, ebook]);
