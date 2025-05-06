@@ -4,4 +4,5 @@ export interface Affiliate {
   company: string;
   website: string;
   affiliateLink: string;
+  dueDate: string;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Affiliate } from '../types/affiliate';
 
 export const useBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState([
@@ -242,3 +243,21 @@ export const useBlogPosts = () => {
     };
   };
 
+export const mockAffiliates: Affiliate[] = [
+  {
+    id: '1',
+    name: 'John Doe',
+    company: 'Tech Corp',
+    website: 'https://techcorp.com',
+    affiliateLink: 'https://techcorp.com/ref=123',
+    dueDate: '2025-06-15'
+  },
+  {
+    id: '2',
+    name: 'Jane Smith',
+    company: 'Digital Solutions',
+    website: 'https://digitalsolutions.net',
+    affiliateLink: 'https://digitalsolutions.net/aff=456',
+    dueDate: '2025-03-01'
+  }
+];

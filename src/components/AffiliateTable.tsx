@@ -51,6 +51,7 @@ const AffiliateTable = ({ onEditAffiliate }: AffiliateTableProps) => {
               <TableHead>Company</TableHead>
               <TableHead className="hidden md:table-cell">Website</TableHead>
               <TableHead>Affiliate Link</TableHead>
+              <TableHead>Due Date</TableHead>
               <TableHead className="w-[100px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -87,6 +88,12 @@ const AffiliateTable = ({ onEditAffiliate }: AffiliateTableProps) => {
                         <LinkIcon className={`h-4 w-4 transition-transform duration-300 ${copiedId === affiliate.id ? 'scale-125 text-green-500' : ''}`} />
                       </Button>
                     </div>
+                  </TableCell>
+                  <TableCell>
+                    {new Date(affiliate.dueDate).toLocaleDateString('en-GB')}
+                    {new Date(affiliate.dueDate) < new Date() && (
+                      <span className="text-red-500 ml-2">Expired</span>
+                    )}
                   </TableCell>
                   <TableCell>
                     <div className="flex items-center gap-2">

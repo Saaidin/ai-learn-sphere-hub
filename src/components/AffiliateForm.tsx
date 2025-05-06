@@ -36,12 +36,14 @@ const AffiliateForm = ({
           company: editingAffiliate.company,
           website: editingAffiliate.website,
           affiliateLink: editingAffiliate.affiliateLink,
+          dueDate: editingAffiliate.dueDate,
         }
       : {
           name: '',
           company: '',
           website: '',
           affiliateLink: '',
+          dueDate: '',
         },
   });
 
@@ -69,6 +71,7 @@ const AffiliateForm = ({
         company: editingAffiliate.company,
         website: editingAffiliate.website,
         affiliateLink: editingAffiliate.affiliateLink,
+        dueDate: editingAffiliate.dueDate,
       });
     } else {
       reset({
@@ -76,6 +79,7 @@ const AffiliateForm = ({
         company: '',
         website: '',
         affiliateLink: '',
+        dueDate: '',
       });
     }
   }, [isOpen, editingAffiliate, reset]);
@@ -150,6 +154,17 @@ const AffiliateForm = ({
               <p className="text-sm text-destructive">
                 {errors.affiliateLink.message}
               </p>
+            )}
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="dueDate">Due Date</Label>
+            <Input
+              id="dueDate"
+              type="date"
+              {...register('dueDate', { required: 'Due date is required' })}
+            />
+            {errors.dueDate && (
+              <p className="text-sm text-destructive">{errors.dueDate.message}</p>
             )}
           </div>
           <DialogFooter className="pt-4">
