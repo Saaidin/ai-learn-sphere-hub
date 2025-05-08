@@ -121,42 +121,59 @@ export const ebooks = [
   },
   {
     id: '2',
-    title: 'Mastering Natural Language Processing',
-    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
-    author: 'Dr. Maria Garcia',
-    description: 'A complete reference for NLP techniques from traditional methods to cutting-edge transformer models. Includes practical examples and code snippets.',
-    category: 'NLP',
+    title: 'Advanced Machine Learning Techniques',
+    coverImage: '/images/ebooks/eb-e-2.png',
+    author: 'Dr. Sarah Chen',
+    description: 'Dive deep into advanced machine learning concepts and techniques. Learn about ensemble methods, hyperparameter tuning, and model optimization.',
+    category: 'Machine Learning',
     pages: 320,
-    freePreview: false,
-    publishedDate: 'June 10, 2023',
-    isbn: '978-1-23-456789-0',
-    downloadLink: '/downloads/nlp-mastery.pdf',
+    freePreview: true,
+    publishedDate: 'April 1, 2023',
+    isbn: '978-1-23-456789-1',
+    downloadLink: '/downloads/advanced-ml.pdf',
     tableOfContents: [
-      'Text Preprocessing',
-      'Word Embeddings',
-      'Sequence Models',
-      'Transformer Architectures',
-      'Deployment Strategies'
+      'Ensemble Methods',
+      'Model Optimization',
+      'Feature Engineering',
+      'Advanced Neural Architectures'
     ]
   },
   {
     id: '3',
-    title: 'Computer Vision Fundamentals',
-    coverImage: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e',
-    author: 'Prof. James Wilson',
-    description: 'Learn computer vision from the ground up with this hands-on guide covering OpenCV, TensorFlow, and PyTorch implementations.',
-    category: 'Computer Vision',
-    pages: 275,
+    title: 'Practical AI Ethics',
+    coverImage: '/images/ebooks/eb-e-3.png',
+    author: 'Prof. Emily Thompson',
+    description: 'Essential guide to understanding and implementing ethical AI practices in real-world applications.',
+    category: 'AI Ethics',
+    pages: 280,
     freePreview: true,
-    publishedDate: 'January 5, 2024',
-    isbn: '978-0-12-345678-9',
-    downloadLink: '/downloads/cv-fundamentals.pdf',
+    publishedDate: 'May 15, 2023',
+    isbn: '978-1-23-456789-2',
+    downloadLink: '/downloads/ai-ethics.pdf',
     tableOfContents: [
-      'Image Processing Basics',
-      'Feature Detection',
-      'Object Recognition',
-      'Neural Networks for CV',
-      'Real-time Applications'
+      'Fundamentals of AI Ethics',
+      'Bias in AI Systems',
+      'Privacy Considerations',
+      'Responsible AI Development'
+    ]
+  },
+  {
+    id: '4',
+    title: 'AI for Business Innovation',
+    coverImage: '/images/ebooks/eb-e-4.png',
+    author: 'Michael Roberts',
+    description: 'Learn how to leverage AI technologies to drive business innovation and digital transformation.',
+    category: 'Business AI',
+    pages: 295,
+    freePreview: false,
+    publishedDate: 'June 1, 2023',
+    isbn: '978-1-23-456789-3',
+    downloadLink: '/downloads/ai-business.pdf',
+    tableOfContents: [
+      'AI Strategy Development',
+      'Implementation Guidelines',
+      'Case Studies',
+      'Future Trends'
     ]
   }
 ];

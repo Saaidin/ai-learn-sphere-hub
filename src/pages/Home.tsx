@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEbooks } from '@/data/mockData';
 import Hero from '@/components/Hero';
 import FeaturedSection from '@/components/FeaturedSection';
 import BlogPostCard, { BlogPost } from '@/components/BlogPostCard';
@@ -65,35 +66,22 @@ const Home = () => {
     }
   ];
 
-  // Sample data for ebooks
-  const featuredEbooks: Ebook[] = [
-    {
-      id: '1',
-      title: 'Complete Guide to Machine Learning Algorithms',
-      coverImage: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      author: 'Dr. Alan Turing',
-      description: 'A comprehensive guide covering all major machine learning algorithms with practical examples.',
-      category: 'Machine Learning',
-      pages: 245,
-      freePreview: true
-    },
-    {
-      id: '2',
-      title: 'AI Ethics and Responsible Development',
-      coverImage: 'https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      author: 'Maria Rodriguez',
-      description: 'Exploring the ethical considerations and responsible practices in AI development.',
-      category: 'AI Ethics',
-      pages: 180,
-      freePreview: false
-    }
-  ];
-
-  return (
+const { ebooks } = useEbooks();
+const displayedEbooks = React.useMemo(() => {
+  // Sort all ebooks by published date first
+  const sortedEbooks = [...ebooks].sort((a, b) => {
+    const dateA = new Date(a.publishedDate || '').getTime();
+    const dateB = new Date(b.publishedDate || '').getTime();
+    return dateB - dateA; // Sort in descending order (newest first)
+    });
+  
+  // Take the first 3 ebooks
+  return sortedEbooks.slice(0, 3);
+  }, [ebooks]);
+return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero />
-
       {/* Featured Blog Posts */}
       <FeaturedSection
         title="Latest Blog Posts"
@@ -107,7 +95,6 @@ const Home = () => {
           ))}
         </div>
       </FeaturedSection>
-
       {/* Featured Videos */}
       <FeaturedSection
         title="Educational Videos"
@@ -121,22 +108,19 @@ const Home = () => {
           ))}
         </div>
       </FeaturedSection>
-
       {/* Featured eBooks */}
       <FeaturedSection
-        title="eBooks"
-        subtitle="Download comprehensive guides and resources"
+        title="Free Preview eBooks"
+        subtitle="Explore sample chapters from our collection"
         linkTo="/ebooks"
-        linkText="View All eBooks"
+        linkText="Browse Full Library"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {featuredEbooks.map(ebook => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{displayedEbooks.map(ebook => (
             <EbookCard key={ebook.id} ebook={ebook} />
           ))}
         </div>
       </FeaturedSection>
-
-     
     </div>
   );
 };

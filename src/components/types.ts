@@ -1,10 +1,26 @@
-export interface BlogCardProps {
+export interface Ebook {
   id: string;
   title: string;
-  excerpt: string;
   coverImage: string;
-  date: string;
   author: string;
+  description: string;
   category: string;
-  slug: string;
+  pages: number;
+  freePreview: boolean;
+  publishedDate: string;
+  isbn: string;
+  downloadLink: string;
+  tableOfContents: string[];
+}
+
+export interface Video {
+  id: string;
+  title: string;
+  thumbnailUrl: string;
+  youtubeId: string;
+  duration: string;
+  description: string;
+  timestamps?: string;
+  category: string;
+  publishedDate: string;
 }

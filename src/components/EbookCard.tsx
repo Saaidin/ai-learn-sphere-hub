@@ -21,16 +21,21 @@ interface EbookCardProps {
 }
 
 const EbookCard: React.FC<EbookCardProps> = ({ ebook }) => {
-  console.log('Rendering ebook:', ebook); // Add this for debugging
+  // Single render per ebook - StrictMode causes double render in dev
   return (
     <div className="content-card h-full flex flex-col">
       <Link to={`/ebooks/${ebook.id}`} className="flex-grow">
         <div className="relative h-56 overflow-hidden">
-          <img 
-            src={ebook.coverImage} 
+          <img
+            src={ebook.coverImage}
             alt={ebook.title}
             className="w-full h-full object-cover"
           />
+          {ebook.freePreview && (
+            <Badge className="absolute top-2 right-2 bg-green-600 hover:bg-green-700">
+              Free Preview
+            </Badge>
+          )}
         </div>
         <div className="p-5">
           <h3 className="text-lg font-semibold mb-2">{ebook.title}</h3>
