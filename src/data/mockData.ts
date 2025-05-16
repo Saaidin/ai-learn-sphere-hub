@@ -52,6 +52,17 @@ export const useBlogPosts = (): {
       category: 'Vibe-Coding',
       slug: 'why-vsc-is-perfect',
       content: 'The rest of articles read <a href="https://qr.ae/pAvKtg" target="_blank" style="color: blue;">here</a>'
+    },
+     {
+      id: '3',
+      title: 'The 39 Translation Secret: How These Earbuds Outperformed My 200 Gadgets.',
+      excerpt: 'A linguist’s 3-week field test reveals when these budget earbuds work — and when they’ll leave you stranded',
+      coverImage: '/images/blog_section/blog-article-3.png',
+      publishedDate: '2025-05-17',
+      author: 'Saaidin Mat Esa',
+      category: 'Affiliate-Medium',
+      slug: 'the-39-translation',
+      content: 'The rest of articles read <a href="https://medium.com/@dinme73/the-39-translation-secret-how-these-earbuds-outperformed-my-200-gadgets-4c47a1a8c624" target="_blank" style="color: blue;">here</a>'
     }
   ].sort((a: BlogPost, b: BlogPost) =>
     new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
