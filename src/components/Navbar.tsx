@@ -73,6 +73,16 @@ const Navbar = () => {
           <Link to="/ebooks" className="text-gray-600 hover:text-ai-primary font-medium">eBooks</Link>
           <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium">Vibe-Coding</Link>
           <Link to="/affiliate" className="text-gray-600 hover:text-ai-primary font-medium">Affiliate</Link>
+          <div className="relative group">
+            <button className="text-gray-600 hover:text-ai-primary font-medium">
+              Games
+            </button>
+            <div className="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 w-48">
+              <a href="https://claude.ai/public/artifacts/39226c1b-f1cc-44db-8778-b8e412e6f607" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100">
+                Chess
+              </a>
+            </div>
+          </div>
           <Link to="/donate">
             <Button className="bg-ai-secondary hover:bg-ai-accent">
               Support Us
