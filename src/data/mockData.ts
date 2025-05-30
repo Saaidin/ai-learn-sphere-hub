@@ -161,7 +161,7 @@ export const useEbooks = (): {
       freePreview: true,
       publishedDate: 'May 31, 2025',
       isbn: '978-0-1234-5678-9',
-      downloadLink: 'https://drive.google.com/file/d/1FqnhrcCfg-_G-0Qtv6w8z7TUfQkebULD/view?usp=sharing',
+      downloadLink: 'https://drive.google.com/file/d/107n8rx6VBu3pxszZ12ULOlqwFWTfSkZH/view?usp=sharing',
       tableOfContents: ['AI Strategy Development', 'Implementation Guidelines', 'Case Studies', 'Future Trends']
     },
     {
