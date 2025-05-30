@@ -161,7 +161,7 @@ export const useEbooks = (): {
       freePreview: true,
       publishedDate: 'May 31, 2025',
       isbn: '978-0-1234-5678-9',
-      downloadLink: 'https://drive.google.com/file/d/107n8rx6VBu3pxszZ12ULOlqwFWTfSkZH/view?usp=sharing',
+      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/capcut-untuk-tiktok-panduan-ringkas_683a14d1.pdf',
       tableOfContents: ['AI Strategy Development', 'Implementation Guidelines', 'Case Studies', 'Future Trends']
     },
     {
