@@ -21,7 +21,7 @@ const Hero = () => {
               <Button asChild size="lg" className="bg-gradient-to-r from-ai-primary to-ai-secondary hover:opacity-90">
                 <Link to="/blog">
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Start Learning
+                  Go To My Blog
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-ai-primary text-ai-primary hover:bg-ai-light">

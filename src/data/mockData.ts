@@ -151,6 +151,20 @@ export const useEbooks = (): {
 } => {
   const [ebooks, setEbooks] = useState<Ebook[]>([
     {
+      id: '6',
+      title: 'Panduan CapCut Untuk Pengeditan Video TikTok',
+      coverImage: '/images/ebooks/ebook-6.png',
+      author: 'Saaidin Mat Esa',
+      description: 'Saya akan kongsi dengan anda cara membuat dan mengedit video TikTok menggunakan CapCut, untuk tujuan pembelajaran.',
+      category: 'Works-Online',
+      pages: 76,
+      freePreview: true,
+      publishedDate: 'May 31, 2025',
+      isbn: '978-0-1234-5678-9',
+      downloadLink: 'https://drive.google.com/file/d/1FqnhrcCfg-_G-0Qtv6w8z7TUfQkebULD/view?usp=sharing',
+      tableOfContents: ['AI Strategy Development', 'Implementation Guidelines', 'Case Studies', 'Future Trends']
+    },
+    {
       id: '5',
       title: 'Perancangan untuk Menghasilkan Wang Secara Dalam Talian di Malaysia dengan Modal Terhad',
       coverImage: '/images/ebooks/ebook-5.png',
