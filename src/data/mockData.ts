@@ -161,7 +161,7 @@ export const useEbooks = (): {
       freePreview: true,
       publishedDate: 'May 31, 2025',
       isbn: '978-0-1234-5678-9',
-      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/capcut-untuk-tiktok-panduan-ringkas_683a14d1.pdf',
+      downloadLink: 'https://designrr.s3.amazonaws.com/dinme73_at_gmail.com_150555/panduan-ringkas-menggunakan-capcut-untuk-pengeditan-video-tiktok_683ad2b5.pdf',
       tableOfContents: ['AI Strategy Development', 'Implementation Guidelines', 'Case Studies', 'Future Trends']
     },
     {
