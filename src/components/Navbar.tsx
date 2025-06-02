@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -73,6 +72,22 @@ const Navbar = () => {
           <Link to="/ebooks" className="text-gray-600 hover:text-ai-primary font-medium">eBooks</Link>
           <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium">Vibe-Coding</Link>
           <Link to="/affiliate" className="text-gray-600 hover:text-ai-primary font-medium">Affiliate</Link>
+          {/* Apps Dropdown */}
+          <div className="relative group">
+            <button className="text-gray-600 hover:text-ai-primary font-medium">
+              Apps
+            </button>
+            <div className="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 w-48">
+              <a 
+                href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y%22%5D,%22action%22:%22open%22,%22userId%22:%22104331283696219512331%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
+              >
+                Resepi Ideas
+              </a>
+            </div>
+          </div>
           <div className="relative group">
             <button className="text-gray-600 hover:text-ai-primary font-medium">
               Games
@@ -153,6 +168,14 @@ const Navbar = () => {
             <Link to="/videos" className="py-3 text-lg font-medium border-b border-gray-100">Videos</Link>
             <Link to="/ebooks" className="py-3 text-lg font-medium border-b border-gray-100">eBooks</Link>
             <Link to="/affiliate" className="py-3 text-lg font-medium border-b border-gray-100">Affiliate</Link>
+            <a 
+              href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y%22%5D,%22action%22:%22open%22,%22userId%22:%22104331283696219512331%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="py-3 text-lg font-medium border-b border-gray-100"
+            >
+              Resepi Ideas
+            </a>
             <Link to="/donate" className="py-3 text-lg font-medium border-b border-gray-100">Support Us</Link>
             {!isLoggedIn ? (
               <button

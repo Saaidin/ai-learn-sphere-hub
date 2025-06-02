@@ -25,34 +25,13 @@ export const vibeCodingItems = [
   {
     id: '3',
     coverImage: '/images/vibe-code/vc-3.png',
-    title: 'React for Beginners',
-    author: 'Alice Johnson',
+    title: 'Recipe Idea Generator',
+    author: 'Saaidin Mat Esa',
     description: 'A beginner-friendly guide to building web apps with React. Learn about components, state, props, and hooks.',
-    category: 'Web Development',
-    pages: 80,
+    category: 'App Development',
+    pages: 1,
     freePreview: true,
-    websiteUrl: 'https://example.com/react-course'
-  },
-  {
-    id: '4',
-    coverImage: '/images/vibe-code/vc-4.png',
-    title: 'Advanced CSS Tricks',
-    author: 'Bob Brown',
-    description: 'Enhance your web designs with advanced CSS techniques including animations, flexbox, grid, and responsive layouts.',
-    category: 'Web Design',
-    pages: 60,
-    freePreview: false,
-    websiteUrl: 'https://example.com/css-course'
-  },
-  {
-    id: '5',
-    coverImage: '/images/vibe-code/vc-5.png',
-    title: 'Node.js Crash Course',
-    author: 'Carol White',
-    description: 'Get started with backend development using Node.js. Learn about Express, REST APIs, and connecting to databases.',
-    category: 'Backend',
-    pages: 90,
-    freePreview: true,
-    websiteUrl: 'https://example.com/nodejs-course'
+    websiteUrl: 'https://aistudio.google.com/app/apps/drive/10L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y?showPreview=true'
   }
+  
 ];

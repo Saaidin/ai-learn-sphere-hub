@@ -157,7 +157,7 @@ export const useEbooks = (): {
       author: 'Saaidin Mat Esa',
       description: 'Saya akan kongsi dengan anda cara membuat dan mengedit video TikTok menggunakan CapCut, untuk tujuan pembelajaran.',
       category: 'Works-Online',
-      pages: 76,
+      pages: 80,
       freePreview: true,
       publishedDate: 'May 31, 2025',
       isbn: '978-0-1234-5678-9',

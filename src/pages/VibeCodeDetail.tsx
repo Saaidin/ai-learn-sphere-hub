@@ -38,10 +38,18 @@ const VibeCodeDetail: React.FC = () => {
               Download eBook
             </a>
           )}
-          <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
-            Have A Look My Website
-          </a>
-          {vibeCode.id === '3' && (
+          {/* Show "Have A Look My App" button instead of "Have A Look My Website" for ID 3 */}
+          {vibeCode.id !== '3' ? (
+            <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
+              Have A Look My Website
+            </a>
+          ) : (
+            <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
+              Have A Look My App
+            </a>
+          )}
+          {/* Remove the download link for ID 3 */}
+          {vibeCode.id === '3' && vibeCode.downloadLink && false && (
             <a href={vibeCode.downloadLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition inline-block mr-4">
               Download Ebook
             </a>
