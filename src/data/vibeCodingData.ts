@@ -27,7 +27,7 @@ export const vibeCodingItems = [
     coverImage: '/images/vibe-code/vc-3.png',
     title: 'Recipe Idea Generator',
     author: 'Saaidin Mat Esa',
-    description: 'A beginner-friendly guide to building web apps with React. Learn about components, state, props, and hooks.',
+    description: 'Anda boleh mencari idea resipi dengan mudah menggunakan aplikasi ini. Ia menggunakan AI untuk mencadangkan resipi berdasarkan bahan yang anda ada.',
     category: 'App Development',
     pages: 1,
     freePreview: true,
