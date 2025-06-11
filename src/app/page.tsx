@@ -53,8 +53,9 @@ const Page = () => {
 
   const handleLogout = () => {
     localStorage.setItem('isAuthenticated', 'false');
+    localStorage.removeItem('hasSignedUp');
     setIsAuthenticated(false);
-    // Don't change isNewUser or hasSignedUp status
+    setIsNewUser(true);
   };
 
   return (
