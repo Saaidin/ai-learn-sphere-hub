@@ -59,14 +59,16 @@ const Page = () => {
 
   return (
     <main className="container mx-auto px-4 py-6">
-      <Header
-        openAddModal={handleOpenModal}
-        isAuthenticated={isAuthenticated}
-        isNewUser={isNewUser}
-        onSignUp={handleSignUp}
-        onLogin={handleLogin}
-        onLogout={handleLogout}
-      />
+      <div style={{ backgroundColor: 'white' }}> {/* Added background color */}
+        <Header
+          openAddModal={handleOpenModal}
+          isAuthenticated={isAuthenticated}
+          isNewUser={isNewUser}
+          onSignUp={handleSignUp}
+          onLogin={handleLogin}
+          onLogout={handleLogout}
+        />
+      </div> {/* Closing div */}
     </main>
   );
 };
