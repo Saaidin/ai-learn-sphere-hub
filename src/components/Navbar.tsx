@@ -86,6 +86,14 @@ const Navbar = () => {
               >
                 Resepi Ideas
               </a>
+              <a 
+                href="https://online-course-platform-umber.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
+              >
+                Online Course Platform
+              </a>
             </div>
           </div>
           <div className="relative group">
