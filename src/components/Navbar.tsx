@@ -67,10 +67,10 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/blog" className="text-gray-600 hover:text-ai-primary font-medium">Blog</Link>
-          <Link to="/videos" className="text-gray-600 hover:text-ai-primary font-medium">Videos</Link>
-          <Link to="/ebooks" className="text-gray-600 hover:text-ai-primary font-medium">eBooks</Link>
-          <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium">Vibe-Coding</Link>
+          <Link to="/blog" className="text-gray-600 hover:text-ai-primary font-medium hidden lg:inline-block">Blog</Link>
+          <Link to="/videos" className="text-gray-600 hover:text-ai-primary font-medium hidden lg:inline-block">Videos</Link>
+          <Link to="/ebooks" className="text-gray-600 hover:text-ai-primary font-medium hidden lg:inline-block">eBooks</Link>
+          <Link to="/vibe-coding" className="text-gray-600 hover:text-ai-primary font-medium hidden lg:inline-block">Vibe-Coding</Link>
           <Link to="/affiliate" className="text-gray-600 hover:text-ai-primary font-medium">Affiliate</Link>
           {/* Apps Dropdown */}
           <div className="relative group">
@@ -142,14 +142,44 @@ const Navbar = () => {
             <Link to="/videos" className="py-3 text-lg font-medium border-b border-gray-100">Videos</Link>
             <Link to="/ebooks" className="py-3 text-lg font-medium border-b border-gray-100">eBooks</Link>
             <Link to="/affiliate" className="py-3 text-lg font-medium border-b border-gray-100">Affiliate</Link>
-            <a 
-              href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y%22%5D,%22action%22:%22open%22,%22userId%22:%22104331283696219512331%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="py-3 text-lg font-medium border-b border-gray-100"
-            >
-              Resepi Ideas
-            </a>
+            <div className="relative group">
+              <button className="py-3 text-lg font-medium border-b border-gray-100">
+                Apps
+              </button>
+              <div className="pl-4 hidden group-hover:block">
+                <a
+                  href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y%22%5D,%22action%22:%22open%22,%22userId%22:%22104331283696219512331%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 text-lg font-medium border-b border-gray-100 block"
+                >
+                  Resepi Ideas
+                </a>
+                <a
+                  href="https://online-course-platform-umber.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 text-lg font-medium border-b border-gray-100 block"
+                >
+                  Online Course Platform
+                </a>
+              </div>
+            </div>
+            <div  className="relative group">
+              <button className="py-3 text-lg font-medium border-b border-gray-100">
+                Games
+              </button>
+              <div className="pl-4 hidden group-hover:block">
+                <a
+                  href="https://claude.ai/public/artifacts/39226c1b-f1cc-44db-8778-b8e412e6f607"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 text-lg font-medium border-b border-gray-100 block"
+                >
+                  Chess
+                </a>
+              </div>
+            </div>
             <Link to="/donate" className="py-3 text-lg font-medium border-b border-gray-100">Support Us</Link>
           </div>
         </div>
