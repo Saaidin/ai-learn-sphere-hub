@@ -111,40 +111,6 @@ const Navbar = () => {
               Support Us
             </Button>
           </Link>
-          {!isLoggedIn ? (
-            <>
-              <Button
-                onClick={() => setShowRegister(true)}
-                variant="outline"
-                className="text-ai-primary border-ai-primary hover:bg-ai-primary/10"
-              >
-                <UserPlus className="mr-2 h-4 w-4" /> Sign Up
-              </Button>
-              <Button
-                onClick={() => setShowLogin(true)}
-                className="bg-ai-primary hover:bg-ai-accent"
-              >
-                <LogIn className="mr-2 h-4 w-4" /> Login
-              </Button>
-            </>
-          ) : (
-            <>
-              {isAdmin && (
-                <Link to="/admin" className="hidden md:block">
-                  <Button variant="outline" className="text-ai-secondary border-ai-secondary hover:bg-ai-secondary/10">
-                    Admin Panel
-                  </Button>
-                </Link>
-              )}
-              <Button
-                onClick={handleLogout}
-                variant="outline"
-                className="text-ai-primary border-ai-primary hover:bg-ai-primary/10"
-              >
-                <LogOut className="mr-2 h-4 w-4" /> Logout
-              </Button>
-            </>
-          )}
         </nav>
       </div>
 
@@ -185,28 +151,6 @@ const Navbar = () => {
               Resepi Ideas
             </a>
             <Link to="/donate" className="py-3 text-lg font-medium border-b border-gray-100">Support Us</Link>
-            {!isLoggedIn ? (
-              <button
-                onClick={() => setShowLogin(true)}
-                className="py-3 text-lg font-medium border-b border-gray-100 text-left"
-              >
-                Login
-              </button>
-            ) : (
-              <>
-                {isAdmin && (
-                  <Link to="/admin" className="py-3 text-lg font-medium border-b border-gray-100 text-left">
-                    Admin Panel
-                  </Link>
-                )}
-                <button
-                  onClick={handleLogout}
-                  className="py-3 text-lg font-medium border-b border-gray-100 text-left text-ai-primary"
-                >
-                  Logout
-                </button>
-              </>
-            )}
           </div>
         </div>
       )}
