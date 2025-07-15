@@ -41,7 +41,7 @@ const Navbar = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('isAdmin');
   };
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -57,8 +57,8 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile menu button */}
-        <button 
-          className="p-2 md:hidden" 
+        <button
+          className="p-2 md:hidden"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -78,26 +78,26 @@ const Navbar = () => {
               Apps
             </button>
             <div className="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 w-48">
-              <a 
+              <a
                 href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2210L0a8z0Ott4tLzg1PFOFOGl2VBFaZs0Y%22%5D,%22action%22:%22open%22,%22userId%22:%22104331283696219512331%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
               >
                 Resepi Ideas
               </a>
-              <a 
+              <a
                 href="https://online-course-platform-umber.vercel.app"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
               >
                 Online Course Platform
               </a>
-              <a 
+              <a
                 href="https://elliot-wave-ai-analyzer.vercel.app"
                 target="_blank"
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
               >
                 Elliott Wave AI Analyzer
@@ -181,7 +181,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <div  className="relative group">
+            <div className="relative group">
               <button className="py-3 text-lg font-medium border-b border-gray-100">
                 Games
               </button>
