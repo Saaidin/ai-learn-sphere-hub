@@ -1,5 +1,16 @@
 export const vibeCodingItems = [
   {
+    id: '5',
+    coverImage: '/images/vibe-code/vc-8.png',
+    title: 'Elliott Wave AI Analyzer',
+    author: 'Saaidin Mat Esa',
+    description: 'Anda boleh melihat bagaimana EW Pattern terbentuk dan seterusnya kita mengadaptasi di dalam trading yang sebenarnya.',
+    category: 'App Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://elliot-wave-ai-analyzer.vercel.app'
+  },
+  {
     id: '4',
     coverImage: '/images/vibe-code/vc-7.png',
     title: 'Online Course Platform',
