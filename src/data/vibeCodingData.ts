@@ -1,5 +1,15 @@
 export const vibeCodingItems = [
   {
+    id: '6',
+    coverImage: '/images/vibe-code/vc-9.png',
+    title: 'Forex Candlestick Pattern Analyzer',
+    author: 'Saaidin Mat Esa',
+    description: 'Anda boleh melihat Candlestick pattern terbentuk di carta, besar kemungkinan trend akan berubah arah',    category: 'App Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://forex-candlestick-pattern-analyzer.vercel.app'
+  },
+  {
     id: '5',
     coverImage: '/images/vibe-code/vc-8.png',
     title: 'Elliott Wave AI Analyzer',

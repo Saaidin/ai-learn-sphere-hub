@@ -39,7 +39,7 @@ const VibeCodeDetail: React.FC = () => {
             </a>
           )}
           {/* Show "Have A Look My App" button instead of "Have A Look My Website" for ID 3 and 5 */}
-          {vibeCode.id !== '3' && vibeCode.id !== '5' ? (
+          {vibeCode.id !== '3' && vibeCode.id !== '5' && vibeCode.id !== '6'? (
             <a href={vibeCode.websiteUrl} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition inline-block">
               Have A Look My Website
             </a>
