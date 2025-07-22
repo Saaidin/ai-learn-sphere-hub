@@ -102,6 +102,14 @@ const Navbar = () => {
               >
                 Elliott Wave AI Analyzer
               </a>
+              <a
+                href="https://forex-candlestick-pattern-analyzer.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 text-gray-600 hover:text-ai-primary font-medium hover:bg-gray-100"
+              >
+                Forex Candlestick Pattern Analyzer
+              </a>
             </div>
           </div>
           <div className="relative group">
@@ -178,6 +186,14 @@ const Navbar = () => {
                   className="py-3 text-lg font-medium border-b border-gray-100 block"
                 >
                   Elliott Wave AI Analyzer
+                </a>
+                <a
+                  href="https://forex-candlestick-pattern-analyzer.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 text-lg font-medium border-b border-gray-100 block"
+                >
+                  Forex Candlestick Pattern Analyzer
                 </a>
               </div>
             </div>
