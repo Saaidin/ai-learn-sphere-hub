@@ -1,5 +1,16 @@
 export const vibeCodingItems = [
   {
+    id: '7',
+    coverImage: '/images/vibe-code/vc-10.png',
+    title: 'Harmonic Pattern Study Tool',
+    author: 'Saaidin Mat Esa',
+    description: 'Anda boleh melihat Harmonic Patterns terbentuk di carta, kita boleh mengaplikasikan ke dalam chart yang sebenarnya.'
+,    category: 'App Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://harmonic-pattern-tool.vercel.app'
+  },
+  {
     id: '6',
     coverImage: '/images/vibe-code/vc-9.png',
     title: 'Forex Candlestick Pattern Analyzer',
