@@ -1,5 +1,16 @@
 export const vibeCodingItems = [
   {
+    id: '8',
+    coverImage: '/images/vibe-code/vc-11.png',
+    title: 'Portfolio - Dean',
+    author: 'Saaidin Mat Esa',
+    description: 'Ini adalah Portfolio yang telah saya pelajari lama dulu di Udemy online course dan sekarang baru diterbitkan. Ia menggunakan Next.js dan Tailwind CSS.'
+,    category: 'App Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://portfolio-main-one-plum.vercel.app'
+  },
+  {
     id: '7',
     coverImage: '/images/vibe-code/vc-10.png',
     title: 'Harmonic Pattern Study Tool',
