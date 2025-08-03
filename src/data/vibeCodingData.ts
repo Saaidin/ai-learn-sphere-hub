@@ -1,11 +1,22 @@
 export const vibeCodingItems = [
   {
+    id: '9',
+    coverImage: '/images/vibe-code/vc-12.png',
+    title: 'Sport Shoes Shop',
+    author: 'Saaidin Mat Esa',
+    description: 'Ini adalah website untuk penjualan Sport Shoes, boleh membuat bayaran melalui Stripe.'
+,    category: 'Website Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://sport-shoes-shop.vercel.app'
+  },
+  {
     id: '8',
     coverImage: '/images/vibe-code/vc-11.png',
     title: 'Portfolio - Dean',
     author: 'Saaidin Mat Esa',
     description: 'Ini adalah Portfolio yang telah saya pelajari lama dulu di Udemy online course dan sekarang baru diterbitkan. Ia menggunakan Next.js dan Tailwind CSS.'
-,    category: 'App Development',
+,    category: 'Website Development',
     pages: 1,
     freePreview: true,
     websiteUrl: 'https://portfolio-main-one-plum.vercel.app'
