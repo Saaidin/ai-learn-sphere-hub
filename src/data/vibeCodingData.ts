@@ -1,5 +1,16 @@
 export const vibeCodingItems = [
   {
+    id: '10',
+    coverImage: '/images/vibe-code/vc-13.png',
+    title: 'Coffee Shop',
+    author: 'Saaidin Mat Esa',
+    description: 'Ini adalah website untuk penjualan Coffee, boleh membuat bayaran melalui Stripe.'
+,    category: 'Website Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://coffee-shop-two-drab.vercel.app'
+  },
+  {
     id: '9',
     coverImage: '/images/vibe-code/vc-12.png',
     title: 'Sport Shoes Shop',
