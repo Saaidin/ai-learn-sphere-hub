@@ -1,5 +1,16 @@
 export const vibeCodingItems = [
   {
+    id: '11',
+    coverImage: '/images/vibe-code/vc-14.png',
+    title: 'ProSphere Basketball',
+    author: 'Saaidin Mat Esa',
+    description: 'Ini adalah website untuk Kilang Basketball, boleh membuat bayaran melalui Stripe.'
+,    category: 'Website Development',
+    pages: 1,
+    freePreview: true,
+    websiteUrl: 'https://basketball-manufaturing.vercel.app'
+  },
+  {
     id: '10',
     coverImage: '/images/vibe-code/vc-13.png',
     title: 'Coffee Shop',
